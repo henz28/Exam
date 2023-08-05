@@ -11183,7 +11183,24 @@ a:focus {
 	height: 40px !important;
 	background-color: blue;
 }
-
+.checkbox-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+	gap: 10px; /* spacing between columns */
+}
+.permissions-table {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+.permissions-row {
+	display: table-row;
+}
+.permissions-cell {
+	display: table-cell;
+	padding: 8px;
+	border: 1px solid #ccc;
+}
 .chart-pie {
 	position: relative;
 	height: 15rem;

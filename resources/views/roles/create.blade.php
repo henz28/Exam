@@ -20,25 +20,26 @@
 @endif
 {!! Form::open(array('route' => 'roles.store','method'=>'POST')) !!}
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div class="form-group">
             <strong>Name:</strong>
             {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-md-6">
-        <div class="form-group">
-            <strong>Permission:</strong>
-            <br/>
+    <div class="form-group">
+        <strong>Permission:</strong>
+        <br/>
+        <div class="checkbox-container">
             @foreach($permission as $value)
                 <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
                 {{ $value->name }}</label>
-                <br/>
             @endforeach
         </div>
     </div>
 </div>
-<div class="row">
+</div>
+<div class="row" style="margin-top:10%;">
     <div class="col-md-12 text-center">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
